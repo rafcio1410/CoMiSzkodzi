@@ -24,3 +24,11 @@ CoMiSzkodzi/CoMiSzkodzi/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
 CoMiSzkodzi/CoMiSzkodzi/obj/Debug/netstandard2.0/PodsumujPosilkiPage.xaml.g.cs
 CoMiSzkodzi/CoMiSzkodzi/obj/project.assets.json
 .vs/CoMiSzkodzi/v15/.suo
+*.cache
+CoMiSzkodzi/CoMiSzkodzi/bin/Debug/netstandard2.0/CoMiSzkodzi.deps.json
+CoMiSzkodzi/CoMiSzkodzi/bin/Debug/netstandard2.0/CoMiSzkodzi.dll
+CoMiSzkodzi/CoMiSzkodzi/bin/Debug/netstandard2.0/CoMiSzkodzi.pdb
+CoMiSzkodzi/CoMiSzkodzi/obj/Debug/netstandard2.0/CoMiSzkodzi.csproj.FileListAbsolute.txt
+CoMiSzkodzi/CoMiSzkodzi/obj/Debug/netstandard2.0/CoMiSzkodzi.csprojAssemblyReference.cache
+CoMiSzkodzi/CoMiSzkodzi/obj/Debug/netstandard2.0/CoMiSzkodzi.dll
+CoMiSzkodzi/CoMiSzkodzi/obj/Debug/netstandard2.0/CoMiSzkodzi.pdb
