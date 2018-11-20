@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:CoMiSzkodzi"
+             Title="Nazwa Apki"
              x:Class="CoMiSzkodzi.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+            <Button x:Name="WhatYouEat" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Co dziś jadłeś?" TextColor="White" Margin="5" CornerRadius="20"/>
+            <Button Command="{Binding WeekCommand}" x:Name="Week" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" Text="Podsumuj posiłki" TextColor="White" Margin="5" CornerRadius="20"/>
+            <Button x:Name="ProductsList" HorizontalOptions="Fill" BackgroundColor="CornflowerBlue" Text="Mogę / Nie mogę" TextColor="White" Margin="5" CornerRadius="20"/>
+            <Button Command="{Binding InformationsCommand}" x:Name="Informations" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" Text="Informacje" TextColor="White" Margin="5" CornerRadius="20"/>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

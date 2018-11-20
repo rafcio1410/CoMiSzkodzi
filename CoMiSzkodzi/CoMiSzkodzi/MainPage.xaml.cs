@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using FreshMvvm;
 
 namespace CoMiSzkodzi
 {
@@ -12,6 +13,8 @@ namespace CoMiSzkodzi
         public MainPage()
         {
             InitializeComponent();
+         
         }
+
     }
 }

@@ -24,7 +24,6 @@
                     <Button x:Name="Friday" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" Text="Piątek" TextColor="White" Margin="5" CornerRadius="20"/>
                     <Button x:Name="Saturday" HorizontalOptions="Fill" BackgroundColor="CornflowerBlue" Text="Sobota" TextColor="White" Margin="5" CornerRadius="20"/>
                     <Button x:Name="Sunday" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Niedziela" TextColor="White" Margin="5" CornerRadius="20"/>
-                    <Button x:Name="Sunday" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Niedziela" TextColor="White" Margin="5" CornerRadius="20"/>
                 </StackLayout>
             </Grid>
             

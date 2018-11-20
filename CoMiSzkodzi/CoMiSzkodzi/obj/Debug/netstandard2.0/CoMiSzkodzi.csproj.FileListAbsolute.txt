@@ -1,0 +1,14 @@
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\bin\Debug\netstandard2.0\CoMiSzkodzi.deps.json
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\bin\Debug\netstandard2.0\CoMiSzkodzi.dll
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\bin\Debug\netstandard2.0\CoMiSzkodzi.pdb
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzkodziBasePage.xaml.g.cs
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\PodsumujPosilkiPage.xaml.g.cs
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzkodzi.csproj.CoreCompileInputs.cache
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzkodzi.AssemblyInfoInputs.cache
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzkodzi.AssemblyInfo.cs
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\XamlC.stamp
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzkodzi.dll
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzkodzi.pdb
+D:\rafalski\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzkodzi.csprojAssemblyReference.cache

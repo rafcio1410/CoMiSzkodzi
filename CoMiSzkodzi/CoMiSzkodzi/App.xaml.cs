@@ -11,7 +11,7 @@ namespace CoMiSzkodzi
         public App()
         {
             InitializeComponent();
-            var page = FreshPageModelResolver.ResolvePageModel<PodsumujPosilkiPageModel>();
+            Page page = FreshPageModelResolver.ResolvePageModel<MainPageModel>();
             var basicNavContainer = new FreshNavigationContainer(page);
             MainPage = basicNavContainer;
         }
