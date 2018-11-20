@@ -22,7 +22,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "NETStandard.Library/2.0.3": {
+      "NETStandard.Library/2.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -114,10 +114,11 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -126,13 +127,15 @@
         "runtime.json"
       ]
     },
-    "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+    "NETStandard.Library/2.0.1": {
+      "sha512": "cAV6mcKvMeAkoIW7xI+LqvzUZ9Q7IK/IVMkFK2HdHa6h2j7UTLF4Hec64Qr+9CIxgPpvzT+KWAVOOeStbYweRg==",
       "type": "package",
-      "path": "netstandard.library/2.0.3",
+      "path": "netstandard.library/2.0.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "build/NETStandard.Library.targets",
         "build/netstandard2.0/NETStandard.Library.targets",
         "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
         "build/netstandard2.0/ref/System.AppContext.dll",
@@ -249,7 +252,7 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.3.nupkg.sha512",
+        "netstandard.library.2.0.1.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
     },
@@ -490,29 +493,29 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "FreshMvvm >= 2.2.3",
-      "NETStandard.Library >= 2.0.3",
+      "NETStandard.Library >= 2.0.1",
       "Xamarin.Forms >= 3.3.0.912540",
       "sqlite-net-pcl >= 1.5.231"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\acer\\.nuget\\packages\\": {},
+    "C:\\Users\\wbocz\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\rafalski\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi.csproj",
+      "projectUniqueName": "D:\\Projects\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi.csproj",
       "projectName": "CoMiSzkodzi",
-      "projectPath": "D:\\rafalski\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi.csproj",
-      "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-      "outputPath": "D:\\rafalski\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi\\obj\\",
+      "projectPath": "D:\\Projects\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi.csproj",
+      "packagesPath": "C:\\Users\\wbocz\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\CoMiSzkodzi\\CoMiSzkodzi\\CoMiSzkodzi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wbocz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -543,7 +546,7 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.3, )",
+            "version": "[2.0.1, )",
             "autoReferenced": true
           },
           "Xamarin.Forms": {
