@@ -25,3 +25,4 @@ D:\Projects\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzk
 D:\Projects\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\XamlC.stamp
 D:\Projects\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzkodzi.dll
 D:\Projects\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzkodzi.pdb
+D:\Projects\CoMiSzkodzi\CoMiSzkodzi\CoMiSzkodzi\obj\Debug\netstandard2.0\CoMiSzkodzi.csprojAssemblyReference.cache
