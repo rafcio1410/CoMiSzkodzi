@@ -29,7 +29,7 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    await CoreMethods.PushPageModel<PodsumujPosilkiPageModel>();
+                    await CoreMethods.PushPageModel<InformacjePageModel>();
                     tcs.SetResult(true);
                 });
             }
