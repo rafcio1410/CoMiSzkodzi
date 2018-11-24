@@ -8,7 +8,7 @@ namespace CoMiSzkodzi.Databases
 {
     public class Food
     {
-        [PrimaryKey]
+        [PrimaryKey,AutoIncrement]
         public int id { get; set; }
         public string name { get; set; }
         public Categories categories { get; set;} 
