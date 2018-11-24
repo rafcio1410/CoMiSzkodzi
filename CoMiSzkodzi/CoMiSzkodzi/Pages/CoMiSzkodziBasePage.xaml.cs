@@ -17,7 +17,7 @@ namespace CoMiSzkodzi
 		public CoMiSzkodziBasePage ()
 		{
 			InitializeComponent ();
-            //TitleLabel.Text = Tytul;
+            TitleLabel.Text = "Co Mi Szkodzi";
 		}
 
        
