@@ -5,22 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using FreshMvvm;
 using Xamarin.Forms.Xaml;
 
 namespace CoMiSzkodzi
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CoMiSzkodziBasePage : ContentView
+	public partial class NiedzielaPage : ContentPage
 	{
-    
-		public CoMiSzkodziBasePage ()
+		public NiedzielaPage ()
 		{
 			InitializeComponent ();
-            //TitleLabel.Text = Tytul;
-		}
-
-       
-    
-    }
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+	}
 }

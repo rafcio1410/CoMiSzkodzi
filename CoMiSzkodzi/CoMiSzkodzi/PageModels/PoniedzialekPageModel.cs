@@ -8,11 +8,11 @@ using Xamarin.Forms;
 
 namespace CoMiSzkodzi
 {
-	public class PodsumujPosilkiPageModel : FreshBasePageModel
+	public class PoniedzialekPageModel : FreshBasePageModel
 	{
-		public PodsumujPosilkiPageModel ()
+		public PoniedzialekPageModel ()
 		{
-			
+		
 		}
 	}
 }
