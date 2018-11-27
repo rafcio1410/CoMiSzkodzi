@@ -11,6 +11,18 @@ namespace CoMiSzkodzi
 {
 	public class MainPageModel : FreshBasePageModel
 	{
+        public ICommand WhatYouEatCommand
+        {
+            get
+            {
+                return new FreshAwaitCommand(async (contact, tcs) =>
+                {
+                    await CoreMethods.PushPageModel<PodsumujPosilkiPageModel>();
+                    tcs.SetResult(true);
+                });
+            }
+        }
+
         public ICommand WeekCommand
         {
             get
@@ -23,13 +35,25 @@ namespace CoMiSzkodzi
             }
         }
 
+        public ICommand CheckCommand
+        {
+            get
+            {
+                return new FreshAwaitCommand(async (contact, tcs) =>
+                {
+                    await CoreMethods.PushPageModel<MogeNieMogePageModel>();
+                    tcs.SetResult(true);
+                });
+            }
+        }
+
         public ICommand InformationsCommand
         {
             get
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    await CoreMethods.PushPageModel<PodsumujPosilkiPageModel>();
+                    await CoreMethods.PushPageModel<MogeNieMogePageModel>();
                     tcs.SetResult(true);
                 });
             }
