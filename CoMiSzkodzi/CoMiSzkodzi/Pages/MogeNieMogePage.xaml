@@ -20,6 +20,9 @@
                     <Button Command="{Binding CanCommand}" x:Name="Can" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Mogę" FontSize="Large" TextColor="White" Margin="5" CornerRadius="20"/>
                     <Button Command="{Binding CanNotCommand}" x:Name="CanNot" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" FontSize="Large" Text="Nie mogę" TextColor="White" Margin="5" CornerRadius="20"/>
                     <Button Command="{Binding CheckCommand}" x:Name="Check" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" FontSize="Large" Text="Sprawdź" TextColor="White" Margin="5" CornerRadius="20"/>
+                    <Button x:Name="Can" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Mogę" TextColor="White" Margin="5" CornerRadius="20"/>
+                    <Button x:Name="CanNot" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" Text="Nie mogę" TextColor="White" Margin="5" CornerRadius="20"/>
+                    <Button x:Name="Check" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" Text="Sprawdź" TextColor="White" Margin="5" CornerRadius="20"/>
                 </StackLayout>
             </Grid>
 

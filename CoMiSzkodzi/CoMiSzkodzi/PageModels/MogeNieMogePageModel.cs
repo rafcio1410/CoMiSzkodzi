@@ -15,7 +15,6 @@ namespace CoMiSzkodzi
 		{
 			
 		}
-
         public ICommand CanCommand
         {
             get
@@ -76,4 +75,4 @@ namespace CoMiSzkodzi
             }
         }
     }
-}
+	}
