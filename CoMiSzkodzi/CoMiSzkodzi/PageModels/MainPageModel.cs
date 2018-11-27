@@ -6,6 +6,7 @@ using System.Text;
 
 using Xamarin.Forms;
 using System.Windows.Input;
+using CoMiSzkodzi.PageModels;
 
 namespace CoMiSzkodzi
 {
@@ -17,7 +18,7 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    await CoreMethods.PushPageModel<PodsumujPosilkiPageModel>();
+                    await CoreMethods.PushPageModel<DzisiejszePosilkiPageModel>();
                     tcs.SetResult(true);
                 });
             }

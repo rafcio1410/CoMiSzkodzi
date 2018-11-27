@@ -14,7 +14,8 @@ namespace CoMiSzkodzi
 	{
 		public NieMogePage ()
 		{
-			InitializeComponent ();
+            InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 		}
 	}
 }

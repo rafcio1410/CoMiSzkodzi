@@ -95,6 +95,30 @@ namespace CoMiSzkodzi
             }
         }
 
+        public ICommand NavigateHomeCommand
+        {
+            get
+            {
+                return new FreshAwaitCommand(async (contact, tcs) =>
+                {
+                    await CoreMethods.PopToRoot(false);
+                    tcs.SetResult(true);
+                });
+            }
+        }
+
+        public ICommand NavigateBackCommand
+        {
+            get
+            {
+                return new FreshAwaitCommand(async (contact, tcs) =>
+                {
+                    await CoreMethods.PopPageModel();
+                    tcs.SetResult(true);
+                });
+            }
+        }
+
         public PodsumujPosilkiPageModel ()
 		{
 			

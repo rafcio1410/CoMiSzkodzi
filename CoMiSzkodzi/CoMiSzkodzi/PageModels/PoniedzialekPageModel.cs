@@ -6,6 +6,7 @@ using System.Text;
 
 using Xamarin.Forms;
 using CoMiSzkodzi.Databases;
+using System.Windows.Input;
 
 namespace CoMiSzkodzi
 {
@@ -32,5 +33,29 @@ namespace CoMiSzkodzi
             var foodList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food");
             FoodList = foodList.Result;
 		}
-	}
+
+        public ICommand NavigateHomeCommand
+        {
+            get
+            {
+                return new FreshAwaitCommand(async (contact, tcs) =>
+                {
+                    await CoreMethods.PopToRoot(false);
+                    tcs.SetResult(true);
+                });
+            }
+        }
+
+        public ICommand NavigateBackCommand
+        {
+            get
+            {
+                return new FreshAwaitCommand(async (contact, tcs) =>
+                {
+                    await CoreMethods.PopPageModel();
+                    tcs.SetResult(true);
+                });
+            }
+        }
+    }
 }

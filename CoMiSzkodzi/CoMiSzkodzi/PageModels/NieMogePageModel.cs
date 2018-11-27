@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using System.Windows.Input;
 
 namespace CoMiSzkodzi
 {
@@ -14,5 +15,28 @@ namespace CoMiSzkodzi
 		{
 			
 		}
-	}
+        public ICommand NavigateHomeCommand
+        {
+            get
+            {
+                return new FreshAwaitCommand(async (contact, tcs) =>
+                {
+                    await CoreMethods.PopToRoot(false);
+                    tcs.SetResult(true);
+                });
+            }
+        }
+
+        public ICommand NavigateBackCommand
+        {
+            get
+            {
+                return new FreshAwaitCommand(async (contact, tcs) =>
+                {
+                    await CoreMethods.PopPageModel();
+                    tcs.SetResult(true);
+                });
+            }
+        }
+    }
 }

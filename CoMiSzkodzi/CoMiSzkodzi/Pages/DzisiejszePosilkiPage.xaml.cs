@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace CoMiSzkodzi
+namespace CoMiSzkodzi.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SprawdzPage : ContentPage
+	public partial class DzisiejszePosilkiPage : ContentPage
 	{
-		public SprawdzPage ()
+		public DzisiejszePosilkiPage ()
 		{
-            InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-		}
+            InitializeComponent();
+        }
 	}
 }

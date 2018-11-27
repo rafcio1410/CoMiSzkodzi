@@ -14,7 +14,8 @@ namespace CoMiSzkodzi
 	{
 		public MogePage ()
 		{
-			InitializeComponent ();
+            InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 		}
 	}
 }

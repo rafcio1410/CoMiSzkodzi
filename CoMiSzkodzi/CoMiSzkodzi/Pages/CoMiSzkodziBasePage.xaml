@@ -5,9 +5,9 @@
     <ContentView.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Goldenrod" >
-                <Button HorizontalOptions="StartAndExpand" Image="backarrow.png" Margin="0" Padding="0" BackgroundColor="Goldenrod"/>
+                <Button Command="{Binding NavigateBackCommand}" HorizontalOptions="StartAndExpand" Image="backarrow.png" Margin="0" Padding="0" BackgroundColor="Goldenrod"/>
                 <Label Text="" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="TitleLabel" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
-                <Button HorizontalOptions="EndAndExpand" Image="home.png" Margin="0" Padding="0" BackgroundColor="Goldenrod" />
+                <Button Command="{Binding NavigateHomeCommand}" HorizontalOptions="EndAndExpand" Image="home.png" Margin="0" Padding="0" BackgroundColor="Goldenrod" />
             </StackLayout>
         </StackLayout>
     </ContentView.Content>
