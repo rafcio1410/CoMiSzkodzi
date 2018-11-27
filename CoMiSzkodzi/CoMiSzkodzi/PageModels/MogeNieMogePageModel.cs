@@ -6,31 +6,35 @@ using System.Text;
 
 using Xamarin.Forms;
 using System.Windows.Input;
-using CoMiSzkodzi.PageModels;
 
 namespace CoMiSzkodzi
 {
-	public class MainPageModel : FreshBasePageModel
+	public class MogeNieMogePageModel : FreshBasePageModel
 	{
-        public ICommand WhatYouEatCommand
+		public MogeNieMogePageModel ()
+		{
+			
+		}
+
+        public ICommand CanCommand
         {
             get
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    await CoreMethods.PushPageModel<DzisiejszePosilkiPageModel>();
+                    await CoreMethods.PushPageModel<MogePageModel>();
                     tcs.SetResult(true);
                 });
             }
         }
 
-        public ICommand WeekCommand
+        public ICommand CanNotCommand
         {
             get
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    await CoreMethods.PushPageModel<PodsumujPosilkiPageModel>();
+                    await CoreMethods.PushPageModel<NieMogePageModel>();
                     tcs.SetResult(true);
                 });
             }
@@ -42,29 +46,34 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    await CoreMethods.PushPageModel<MogeNieMogePageModel>();
+                    await CoreMethods.PushPageModel<SprawdzPageModel>();
                     tcs.SetResult(true);
                 });
             }
         }
 
-        public ICommand InformationsCommand
+        public ICommand NavigateHomeCommand
         {
             get
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    await CoreMethods.PushPageModel<InformacjePageModel>();
+                    await CoreMethods.PopToRoot(false);
                     tcs.SetResult(true);
                 });
             }
         }
 
-
-        public MainPageModel ()
-		{
-            
-
+        public ICommand NavigateBackCommand
+        {
+            get
+            {
+                return new FreshAwaitCommand(async (contact, tcs) =>
+                {
+                    await CoreMethods.PopPageModel();
+                    tcs.SetResult(true);
+                });
+            }
         }
-	}
+    }
 }

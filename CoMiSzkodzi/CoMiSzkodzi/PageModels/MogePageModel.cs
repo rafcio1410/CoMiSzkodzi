@@ -9,11 +9,11 @@ using System.Windows.Input;
 
 namespace CoMiSzkodzi
 {
-	public class InformacjePageModel : FreshBasePageModel
+	public class MogePageModel : FreshBasePageModel
 	{
-		public InformacjePageModel ()
+		public MogePageModel ()
 		{
-
+			
 		}
 
         public ICommand NavigateHomeCommand

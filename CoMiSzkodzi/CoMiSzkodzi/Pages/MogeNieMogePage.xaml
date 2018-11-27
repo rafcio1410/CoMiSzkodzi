@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CoMiSzkodzi.SprawdzPage"             
+             x:Class="CoMiSzkodzi.MogeNieMogePage"
              xmlns:d="clr-namespace:CoMiSzkodzi;assembly=CoMiSzkodzi"
-                           >
+             BackgroundImage="backgroundimage.png"
+             >
+
     <ContentPage.Content>
         <StackLayout>
             <Grid>
@@ -15,7 +17,9 @@
                     <d:CoMiSzkodziBasePage/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1">
-                    <Label Text="Sprawdź" FontSize="Large" TextColor="White"/>
+                    <Button Command="{Binding CanCommand}" x:Name="Can" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Mogę" FontSize="Large" TextColor="White" Margin="5" CornerRadius="20"/>
+                    <Button Command="{Binding CanNotCommand}" x:Name="CanNot" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" FontSize="Large" Text="Nie mogę" TextColor="White" Margin="5" CornerRadius="20"/>
+                    <Button Command="{Binding CheckCommand}" x:Name="Check" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" FontSize="Large" Text="Sprawdź" TextColor="White" Margin="5" CornerRadius="20"/>
                 </StackLayout>
             </Grid>
 

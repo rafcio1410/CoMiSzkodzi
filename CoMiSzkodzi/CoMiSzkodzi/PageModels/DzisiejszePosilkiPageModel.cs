@@ -7,14 +7,14 @@ using System.Text;
 using Xamarin.Forms;
 using System.Windows.Input;
 
-namespace CoMiSzkodzi
+namespace CoMiSzkodzi.PageModels
 {
-	public class InformacjePageModel : FreshBasePageModel
+	public class DzisiejszePosilkiPageModel : FreshBasePageModel
 	{
-		public InformacjePageModel ()
+		public DzisiejszePosilkiPageModel ()
 		{
 
-		}
+        }
 
         public ICommand NavigateHomeCommand
         {
@@ -39,5 +39,6 @@ namespace CoMiSzkodzi
                 });
             }
         }
+
     }
 }

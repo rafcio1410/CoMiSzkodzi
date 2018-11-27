@@ -10,11 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace CoMiSzkodzi
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class NieMogePage : ContentPage
+	public partial class SprawdzPage : ContentPage
 	{
-		public NieMogePage ()
+		public SprawdzPage ()
 		{
-			InitializeComponent ();
-		}
+            InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
 	}
 }

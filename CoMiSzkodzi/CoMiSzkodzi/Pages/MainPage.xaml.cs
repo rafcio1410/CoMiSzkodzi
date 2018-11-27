@@ -12,8 +12,8 @@ namespace CoMiSzkodzi
     {
         public MainPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-         
         }
 
     }
