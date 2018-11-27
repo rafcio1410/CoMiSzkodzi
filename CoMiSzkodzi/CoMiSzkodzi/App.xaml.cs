@@ -22,8 +22,6 @@ namespace CoMiSzkodzi
             Page page = FreshPageModelResolver.ResolvePageModel<MainPageModel>();
             var basicNavContainer = new FreshNavigationContainer(page);
             MainPage = basicNavContainer;
-            var Lista = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM [Food]");
-            var test = Lista.Result;
         }
 
         void PopulateDatabase()
