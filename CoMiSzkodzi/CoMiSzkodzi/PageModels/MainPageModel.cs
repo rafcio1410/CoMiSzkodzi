@@ -53,11 +53,7 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-<<<<<<< HEAD:CoMiSzkodzi/CoMiSzkodzi/MainPageModel.cs
-                    await CoreMethods.PushPageModel<MogeNieMogePageModel>();
-=======
                     await CoreMethods.PushPageModel<InformacjePageModel>();
->>>>>>> master:CoMiSzkodzi/CoMiSzkodzi/PageModels/MainPageModel.cs
                     tcs.SetResult(true);
                 });
             }
