@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoMiSzkodzi.MogeNieMogePage"
+             xmlns:d="clr-namespace:CoMiSzkodzi;assembly=CoMiSzkodzi"
+             >
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <d:CoMiSzkodziBasePage/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1">
+                    <Button x:Name="Can" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Mogę" TextColor="White" Margin="5" CornerRadius="20"/>
+                    <Button x:Name="CanNot" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" Text="Nie mogę" TextColor="White" Margin="5" CornerRadius="20"/>
+                    <Button x:Name="Check" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" Text="Sprawdź" TextColor="White" Margin="5" CornerRadius="20"/>
+                </StackLayout>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
