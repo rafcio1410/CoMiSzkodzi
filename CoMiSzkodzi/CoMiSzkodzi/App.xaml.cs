@@ -28,14 +28,13 @@ namespace CoMiSzkodzi
         {
             DatabaseConnection.Connection.CreateTableAsync<Food>();
             List<Food> food = new List<Food>();
-            food.Add(new Food { name = "Kurczak", categories = Enums.Categories.Meats, blacklisted = false });
-            food.Add(new Food { name = "Sok jabłkowy", categories = Enums.Categories.Drinks, blacklisted = false });
-            food.Add(new Food { name = "Ser żółty", categories = Enums.Categories.Diary, blacklisted = false });
-            food.Add(new Food { name = "Chipsy Lays", categories = Enums.Categories.Snacks, blacklisted = false });
-            food.Add(new Food { name = "Wołowina", categories = Enums.Categories.Meats, blacklisted = false });
-            food.Add(new Food { name = "Kebab", categories = Enums.Categories.Meals, blacklisted = false });
-            food.Add(new Food { name = "Marchewka", categories = Enums.Categories.Vegetables, blacklisted = false });
-
+            food.Add(new Food { name = "Kurczak", categories = Enums.Categories.Meats, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Mleko", categories = Enums.Categories.Diary, blacklisted = Enums.BlackListed.CanNot });
+            food.Add(new Food { name = "Sól", categories = Enums.Categories.Spices, blacklisted = Enums.BlackListed.Check });
+            food.Add(new Food { name = "Miód", categories = Enums.Categories.Others, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Kopytka", categories = Enums.Categories.Meals, blacklisted = Enums.BlackListed.Check });
+            food.Add(new Food { name = "Sok Pomarańczowy", categories = Enums.Categories.Drinks, blacklisted = Enums.BlackListed.CanNot });
+            food.Add(new Food { name = "Marchewka", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
             DatabaseConnection.Connection.InsertAllAsync(food);
             Settings.HasRunBefore = true;
         }

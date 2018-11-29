@@ -5,7 +5,7 @@
              x:Class="CoMiSzkodzi.PoniedzialekPage"
              Title="Poniedziałek"
              xmlns:d="clr-namespace:CoMiSzkodzi;assembly=CoMiSzkodzi"
-             BackgroundImage="backgroundimage.png">
+             BackgroundImage="backgroundimage.png">    
     <ContentPage.Content>
         <StackLayout>
             <Grid>
@@ -23,8 +23,8 @@
                             <DataTemplate>
                                 <ViewCell>
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding name}" />
-                                        <Switch IsToggled="{Binding blacklisted}" />
+                                        <Label Text="{Binding name}" TextColor="White" FontSize="Medium" />
+                                            
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>

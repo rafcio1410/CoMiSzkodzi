@@ -12,6 +12,6 @@ namespace CoMiSzkodzi.Databases
         public int id { get; set; }
         public string name { get; set; }
         public Categories categories { get; set;} 
-        public bool blacklisted { get; set; }
+        public BlackListed blacklisted { get; set; }
     }
 }

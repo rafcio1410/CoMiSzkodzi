@@ -17,10 +17,19 @@
                 </StackLayout>
                 <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1">
                     <Label Text="Mogę" FontSize="Large" TextColor="White"/>
-                    <Label Text="mogę" FontSize="Large" TextColor="White"/>
+                    <ListView ItemsSource="{Binding CanList}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding name}" TextColor="White" FontSize="Medium" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </StackLayout>
             </Grid>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

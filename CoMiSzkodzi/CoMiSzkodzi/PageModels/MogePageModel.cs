@@ -6,15 +6,31 @@ using System.Text;
 
 using Xamarin.Forms;
 using System.Windows.Input;
+using CoMiSzkodzi.Databases;
 
 namespace CoMiSzkodzi
 {
 	public class MogePageModel : FreshBasePageModel
 	{
-		public MogePageModel ()
+        List<Food> _canlist;
+        public List<Food> CanList
+        {
+            get
+            {
+                return _canlist;
+            }
+            set
+            {
+                _canlist = value;
+                RaisePropertyChanged("CanList");
+            }
+        }
+
+        public MogePageModel ()
 		{
-			
-		}
+            var canList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food WHERE blacklisted = 2");
+            CanList = canList.Result;
+        }
         public ICommand NavigateHomeCommand
         {
             get
