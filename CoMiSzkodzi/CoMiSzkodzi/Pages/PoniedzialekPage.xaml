@@ -3,8 +3,8 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CoMiSzkodzi.PoniedzialekPage"
-             Title="Poniedziałek"
              xmlns:d="clr-namespace:CoMiSzkodzi;assembly=CoMiSzkodzi"
+             xmlns:control="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"
              BackgroundImage="backgroundimage.png">    
     <ContentPage.Content>
         <StackLayout>
@@ -17,14 +17,29 @@
                     <d:CoMiSzkodziBasePage/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1">
-                    <Label Text="Poniedziałek" FontSize="Large" />
-                    <ListView ItemsSource="{Binding FoodList}">
+                    <Label Text="Poniedziałek" TextColor="White" FontSize="Large" Margin="10" HorizontalOptions="Center"/>
+                    <ListView SelectionMode="None" ItemsSource="{Binding FoodList}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding name}" TextColor="White" FontSize="Medium" />
-                                            
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="{Binding name}" TextColor="White" BackgroundColor="CornflowerBlue" HorizontalTextAlignment="Center" FontSize="Small" Grid.Column="0" VerticalTextAlignment="Center" Margin="8,8,8,8"/>
+                                            <StackLayout Grid.Column ="1" HorizontalOptions="EndAndExpand">
+                                                <control:SegmentedControl  FontSize="10" x:Name="SegmentedControl" BackgroundColor="Goldenrod" SelectedSegment="{Binding SegmentSelection}" TintColor="White" SelectedTextColor="DarkBlue" DisabledColor="Gray" Margin="0,8,8,8" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
+                                                    <control:SegmentedControl.Children>
+                                                        <control:SegmentedControlOption Text="        Mogę        "/>
+                                                        <control:SegmentedControlOption Text="Sprawdź"/>
+                                                        <control:SegmentedControlOption Text="Nie mogę"/>
+                                                    </control:SegmentedControl.Children>
+                                                </control:SegmentedControl>
+                                            </StackLayout>
+
+                                        </Grid>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>

@@ -7,10 +7,10 @@
 
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
-            <Button Command="{Binding WhatYouEatCommand}" x:Name="WhatYouEat" FontSize="Large" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Dzisiejsze posiłki" TextColor="White" Margin="5" CornerRadius="20"/>
-            <Button Command="{Binding WeekCommand}" x:Name="Week" FontSize="Large" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" Text="Podsumuj posiłki" TextColor="White" Margin="5" CornerRadius="20"/>
-            <Button Command="{Binding CheckCommand}" x:Name="Check" FontSize="Large" HorizontalOptions="Fill" BackgroundColor="CornflowerBlue" Text="Mogę / Nie mogę" TextColor="White" Margin="5" CornerRadius="20"/>
-            <Button Command="{Binding InformationsCommand}" x:Name="Informations" FontSize="Large" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" Text="Informacje" TextColor="White" Margin="5" CornerRadius="20"/>
+            <Button Command="{Binding WhatYouEatCommand}" x:Name="WhatYouEat" FontSize="Large" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Dzisiejsze posiłki" TextColor="White" Margin="15" CornerRadius="20"/>
+            <Button Command="{Binding WeekCommand}" x:Name="Week" FontSize="Large" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" Text="Podsumuj posiłki" TextColor="White" Margin="15" CornerRadius="20"/>
+            <Button Command="{Binding CheckCommand}" x:Name="Check" FontSize="Large" HorizontalOptions="Fill" BackgroundColor="CornflowerBlue" Text="Mogę / Nie mogę" TextColor="White" Margin="15" CornerRadius="20"/>
+            <Button Command="{Binding InformationsCommand}" x:Name="Informations" FontSize="Large" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Informacje" TextColor="White" Margin="15" CornerRadius="20"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

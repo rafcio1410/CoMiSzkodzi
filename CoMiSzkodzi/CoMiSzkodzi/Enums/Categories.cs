@@ -6,6 +6,7 @@ namespace CoMiSzkodzi.Enums
 {
     public enum Categories
     {
+        User,
         Vegetables,
         Fruits,
         Drinks,

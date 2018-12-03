@@ -28,13 +28,33 @@ namespace CoMiSzkodzi
         {
             DatabaseConnection.Connection.CreateTableAsync<Food>();
             List<Food> food = new List<Food>();
-            food.Add(new Food { name = "Kurczak", categories = Enums.Categories.Meats, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Marchewka", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can }); // Odtąd WARZYWA
+            food.Add(new Food { name = "Cebula", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Por", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Szczypiorek", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Koperek", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Buraki", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Ziemniaki", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Groszek", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Fasola", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Bób", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Banan", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can }); //Odtąd OWOCE
+            food.Add(new Food { name = "Jabłko surowe", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Jabłko gotowane", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Ananas", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Truskawki", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Maliny", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Porzeczki", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Winogrona", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Pomarańcze", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Śliwki", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Mandarynki", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
+            food.Add(new Food { name = "Kurczak", categories = Enums.Categories.Meats, blacklisted = Enums.BlackListed.Can }); // Reszte posegregowac
             food.Add(new Food { name = "Mleko", categories = Enums.Categories.Diary, blacklisted = Enums.BlackListed.CanNot });
             food.Add(new Food { name = "Sól", categories = Enums.Categories.Spices, blacklisted = Enums.BlackListed.Check });
             food.Add(new Food { name = "Miód", categories = Enums.Categories.Others, blacklisted = Enums.BlackListed.Can });
             food.Add(new Food { name = "Kopytka", categories = Enums.Categories.Meals, blacklisted = Enums.BlackListed.Check });
             food.Add(new Food { name = "Sok Pomarańczowy", categories = Enums.Categories.Drinks, blacklisted = Enums.BlackListed.CanNot });
-            food.Add(new Food { name = "Marchewka", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
             DatabaseConnection.Connection.InsertAllAsync(food);
             Settings.HasRunBefore = true;
         }

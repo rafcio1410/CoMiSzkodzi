@@ -26,10 +26,30 @@ namespace CoMiSzkodzi
             }
         }
 
+        List<Food> _canfruitslist;
+        public List<Food> CanFruitsList
+        {
+            get
+            {
+                return _canfruitslist;
+            }
+            set
+            {
+                _canfruitslist = value;
+                RaisePropertyChanged("CanFruitsList");
+            }
+        }
+
         public MogePageModel ()
 		{
-            var canList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food WHERE blacklisted = 2");
+            var canList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food WHERE blacklisted = 0 AND categories = 1 ORDER BY name" );
             CanList = canList.Result;
+
+            var canfruitslist = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food WHERE blacklisted = 0 AND categories = 2 ORDER BY name");
+            CanFruitsList = canfruitslist.Result;
+
+            CanList.AddRange(CanFruitsList); // łączymy dwie listy
+
         }
         public ICommand NavigateHomeCommand
         {
