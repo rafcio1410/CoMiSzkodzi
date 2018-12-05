@@ -16,10 +16,10 @@
                 <StackLayout Grid.Row="0">
                     <d:CoMiSzkodziBasePage/>
                 </StackLayout>
-                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1">
-                    <Button Command="{Binding CanCommand}" x:Name="Can" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Mogę" FontSize="Large" TextColor="White" Margin="5" CornerRadius="20"/>
-                    <Button Command="{Binding CanNotCommand}" x:Name="CanNot" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" FontSize="Large" Text="Nie mogę" TextColor="White" Margin="5" CornerRadius="20"/>
-                    <Button Command="{Binding CheckCommand}" x:Name="Check" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" FontSize="Large" Text="Sprawdź" TextColor="White" Margin="5" CornerRadius="20"/>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1">
+                    <Button Command="{Binding CanCommand}" x:Name="Can" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Mogę" FontSize="Large" TextColor="White" Margin="10" CornerRadius="20"/>
+                    <Button Command="{Binding CanNotCommand}" x:Name="CanNot" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" FontSize="Large" Text="Nie mogę" TextColor="White" Margin="10" CornerRadius="20"/>
+                    <Button Command="{Binding CheckCommand}" x:Name="Check" HorizontalOptions="Fill" BackgroundColor="CornflowerBlue" FontSize="Large" Text="Sprawdź" TextColor="White" Margin="10" CornerRadius="20"/>
                 </StackLayout>
             </Grid>
 
