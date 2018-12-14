@@ -7,14 +7,16 @@ using System.Text;
 using Xamarin.Forms;
 using CoMiSzkodzi.Databases;
 using System.Windows.Input;
+using CoMiSzkodzi.Helpers;
+using System.Collections.ObjectModel;
 
 namespace CoMiSzkodzi
 {
 
 	public class PoniedzialekPageModel : FreshBasePageModel
 	{
-        List<Food> _foodlist;
-        public List<Food> FoodList
+        ObservableCollection<FoodGroupingList> _foodlist;
+        public ObservableCollection<FoodGroupingList> FoodList
         {
             get
             {
@@ -27,12 +29,23 @@ namespace CoMiSzkodzi
             }
         }
 
+        protected override void ViewIsAppearing(object sender, EventArgs e)
+        {
+            base.ViewIsAppearing(sender, e);
+            var foodList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food");
+            var listToSort = foodList.Result;
+            FoodGrouping foodGrouping = new FoodGrouping();
 
+            FoodList = foodGrouping.CreateGroupsFromData(listToSort);
+        }
         public PoniedzialekPageModel ()
 		{
-            var foodList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food");
-            FoodList = foodList.Result;
-		}
+           // var foodList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food");
+           // var listToSort = foodList.Result;
+           // FoodGrouping foodGrouping = new FoodGrouping();
+
+           // FoodList = foodGrouping.CreateGroupsFromData(listToSort);
+        }
 
         public ICommand NavigateHomeCommand
         {
