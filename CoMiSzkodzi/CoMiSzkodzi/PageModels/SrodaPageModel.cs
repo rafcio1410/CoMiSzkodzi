@@ -13,8 +13,22 @@ namespace CoMiSzkodzi
 	{
 		public SrodaPageModel ()
 		{
-			
-		}
+            Title = "Środa";
+        }
+
+        private string _title;
+        public string Title
+        {
+            get
+            {
+                return _title;
+            }
+            set
+            {
+                _title = value;
+                RaisePropertyChanged("Title");
+            }
+        }
 
         public ICommand NavigateHomeCommand
         {

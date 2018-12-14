@@ -16,6 +16,8 @@ namespace CoMiSzkodzi
 	public class PoniedzialekPageModel : FreshBasePageModel
 	{
         ObservableCollection<FoodGroupingList> _foodlist;
+        
+
         public ObservableCollection<FoodGroupingList> FoodList
         {
             get
@@ -26,6 +28,19 @@ namespace CoMiSzkodzi
             {
                 _foodlist = value;
                 RaisePropertyChanged("FoodList");
+            }
+        }
+        private string _title;
+        public string Title
+        {
+            get
+            {
+                return _title;
+            }
+            set
+            {
+                _title = value;
+                RaisePropertyChanged("Title");
             }
         }
 
@@ -40,11 +55,7 @@ namespace CoMiSzkodzi
         }
         public PoniedzialekPageModel ()
 		{
-           // var foodList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food");
-           // var listToSort = foodList.Result;
-           // FoodGrouping foodGrouping = new FoodGrouping();
-
-           // FoodList = foodGrouping.CreateGroupsFromData(listToSort);
+            Title = "Poniedziałek";
         }
 
         public ICommand NavigateHomeCommand

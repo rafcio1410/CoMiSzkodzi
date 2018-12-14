@@ -13,9 +13,22 @@ namespace CoMiSzkodzi
 	{
 		public WtorekPageModel ()
 		{
-			
-		}
+            Title = "Wtorek";
+        }
 
+        private string _title;
+        public string Title
+        {
+            get
+            {
+                return _title;
+            }
+            set
+            {
+                _title = value;
+                RaisePropertyChanged("Title");
+            }
+        }
         public ICommand NavigateHomeCommand
         {
             get

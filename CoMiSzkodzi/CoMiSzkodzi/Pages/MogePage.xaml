@@ -12,46 +12,50 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="0">
                     <d:CoMiSzkodziBasePage/>
                 </StackLayout>
-                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="1" >
-                    <Label Text="MOGĘ" TextColor="White" BackgroundColor="Green" FontSize="Large" Margin="8" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
-                    <StackLayout>
-                        <ListView SelectionMode="None" ItemsSource="{Binding CanList}" Grid.Row="0" >
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <ViewCell>
-                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" >
-                                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="*"/>
-                                                    <ColumnDefinition Width="Auto" />
-                                                </Grid.ColumnDefinitions>
-                                                <Label Text="{Binding name}" TextColor="White" BackgroundColor="CornflowerBlue" HorizontalTextAlignment="Center" FontSize="Small" Grid.Column="0" VerticalTextAlignment="Center" Margin="8,8,8,8"/>
-                                                <StackLayout Grid.Column ="1" HorizontalOptions="EndAndExpand">
-                                                    <control:SegmentedControl  FontSize="10" x:Name="SegmentedControl" BackgroundColor="Goldenrod" SelectedSegment="{Binding SegmentSelection}" TintColor="White" SelectedTextColor="DarkBlue" DisabledColor="Gray" Margin="0,8,8,8" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
-                                                        <control:SegmentedControl.Children>
-                                                            <control:SegmentedControlOption Text="        Mogę        "/>
-                                                            <control:SegmentedControlOption Text="Sprawdź"/>
-                                                            <control:SegmentedControlOption Text="Nie mogę"/>
-                                                        </control:SegmentedControl.Children>
-                                                    </control:SegmentedControl>
-                                                </StackLayout>
-                                            </Grid>
-                                        </StackLayout>
-                                    </ViewCell>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </StackLayout>
-                </StackLayout>
-                <StackLayout Grid.Row="2" VerticalOptions="StartAndExpand">
-                    <Button Command="{Binding UpdateCommand}" Text="Aktualizuj" HorizontalOptions="EndAndExpand" />
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1">
+                    <Label Text="Mogę" HorizontalTextAlignment="Center" BackgroundColor="Green" TextColor="White" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                    <ListView SelectionMode="None" ItemsSource="{Binding FoodList}" IsGroupingEnabled="True" >
+                        <ListView.GroupHeaderTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                        <Label Text="{Binding Heading}" TextColor="White" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.GroupHeaderTemplate>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Fill" >
+                                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Label Text="{Binding name}" TextColor="White" BackgroundColor="CornflowerBlue" HorizontalTextAlignment="Center" FontSize="Small" Grid.Column="0" VerticalTextAlignment="Center" Margin="8,8,8,8"/>
+                                            <StackLayout Grid.Column ="1" HorizontalOptions="EndAndExpand">
+                                                <control:SegmentedControl  FontSize="10" x:Name="SegmentedControl" BackgroundColor="Goldenrod" SelectedSegment="{Binding blacklisted}" TintColor="White" SelectedTextColor="DarkBlue" DisabledColor="Gray" Margin="0,8,8,8" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
+                                                    <control:SegmentedControl.Children>
+                                                        <control:SegmentedControlOption Text="        Mogę        "/>
+                                                        <control:SegmentedControlOption Text="Sprawdź"/>
+                                                        <control:SegmentedControlOption Text="Nie mogę"/>
+                                                    </control:SegmentedControl.Children>
+                                                </control:SegmentedControl>
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </StackLayout>
             </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
