@@ -7,50 +7,58 @@ using System.Text;
 using Xamarin.Forms;
 using System.Windows.Input;
 using CoMiSzkodzi.Databases;
+using CoMiSzkodzi.Helpers;
+using System.Collections.ObjectModel;
 
 namespace CoMiSzkodzi
 {
 	public class MogePageModel : FreshBasePageModel
 	{
-        List<Food> _canlist;
-        public List<Food> CanList
+        
+        ObservableCollection<FoodGroupingList> _foodlist;
+        
+
+        public ObservableCollection<FoodGroupingList> FoodList
         {
             get
             {
-                return _canlist;
+                return _foodlist;
             }
             set
             {
-                _canlist = value;
-                RaisePropertyChanged("CanList");
+                _foodlist = value;
+                RaisePropertyChanged("FoodList");
             }
         }
 
-        List<Food> _canfruitslist;
-        public List<Food> CanFruitsList
+        protected override void ViewIsAppearing(object sender, EventArgs e)
         {
-            get
-            {
-                return _canfruitslist;
-            }
-            set
-            {
-                _canfruitslist = value;
-                RaisePropertyChanged("CanFruitsList");
-            }
+            base.ViewIsAppearing(sender, e);
+            var foodList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food WHERE blacklisted = 0 ORDER BY name");
+            var listToSort = foodList.Result;
+            FoodGrouping foodGrouping = new FoodGrouping();
+
+            FoodList = foodGrouping.CreateGroupsFromData(listToSort);
         }
 
-        public MogePageModel ()
+            public MogePageModel ()
 		{
-            var canList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food WHERE blacklisted = 0 AND categories = 1 ORDER BY name" );
-            CanList = canList.Result;
-
-            var canfruitslist = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food WHERE blacklisted = 0 AND categories = 2 ORDER BY name");
-            CanFruitsList = canfruitslist.Result;
-
-            CanList.AddRange(CanFruitsList); // łączymy dwie listy
-
+            NavBarBackgroundColor = new Color(0, 255, 0);
         }
+        private Color _navBarBackgroundColor;
+        public Color NavBarBackgroundColor
+        {
+            get
+            {
+                return _navBarBackgroundColor;
+            }
+            set
+            {
+                _navBarBackgroundColor = value;
+                RaisePropertyChanged("NavBarBackgroundColor");
+            }
+        }
+
         public ICommand NavigateHomeCommand
         {
             get
