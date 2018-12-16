@@ -72,8 +72,7 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </StackLayout>
-            </Grid>
-
+          </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

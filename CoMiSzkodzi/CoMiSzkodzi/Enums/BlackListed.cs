@@ -7,7 +7,7 @@ namespace CoMiSzkodzi.Enums
     public enum BlackListed
     {
         Can,
-        CanNot,
-        Check
+        Check,
+        CanNot
     }
 }
