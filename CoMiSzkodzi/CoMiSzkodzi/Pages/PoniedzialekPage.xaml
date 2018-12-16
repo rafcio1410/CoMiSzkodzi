@@ -17,7 +17,7 @@
                     <d:CoMiSzkodziBasePage/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1" BackgroundColor="Transparent">
-                    <Label Text="Poniedziałek" TextColor="White" FontSize="Large" Margin="10" HorizontalOptions="Center"/>
+                    <SearchBar Placeholder="Wpisz nazwe produktu" SearchCommand="{Binding FilterProducts}" Text="{Binding SearchTerm}"/>
                     <ListView SelectionMode="None" ItemsSource="{Binding FoodList}" IsGroupingEnabled="True" BackgroundColor="Transparent" >
                         <ListView.GroupHeaderTemplate>
                             <DataTemplate>

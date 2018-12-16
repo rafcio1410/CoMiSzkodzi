@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Fody/3.3.2": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "FreshMvvm/2.2.4": {
         "type": "package",
         "compile": {
@@ -25,6 +31,22 @@
         "runtime": {
           "lib/Xamarin.iOS10/Plugin.Segmented.Control.iOS.dll": {},
           "lib/Xamarin.iOS10/Plugin.Segmented.dll": {}
+        }
+      },
+      "PropertyChanged.Fody/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "3.3.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
         }
       },
       "SegmentedControl.FormsPlugin/2.0.1": {
@@ -229,6 +251,7 @@
         "dependencies": {
           "FreshMvvm": "2.2.4",
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
+          "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -243,6 +266,12 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Fody/3.3.2": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "FreshMvvm/2.2.4": {
         "type": "package",
         "compile": {
@@ -266,6 +295,22 @@
         "runtime": {
           "lib/Xamarin.iOS10/Plugin.Segmented.Control.iOS.dll": {},
           "lib/Xamarin.iOS10/Plugin.Segmented.dll": {}
+        }
+      },
+      "PropertyChanged.Fody/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "3.3.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
         }
       },
       "SegmentedControl.FormsPlugin/2.0.1": {
@@ -470,6 +515,7 @@
         "dependencies": {
           "FreshMvvm": "2.2.4",
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
+          "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -484,6 +530,12 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Fody/3.3.2": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "FreshMvvm/2.2.4": {
         "type": "package",
         "compile": {
@@ -507,6 +559,22 @@
         "runtime": {
           "lib/Xamarin.iOS10/Plugin.Segmented.Control.iOS.dll": {},
           "lib/Xamarin.iOS10/Plugin.Segmented.dll": {}
+        }
+      },
+      "PropertyChanged.Fody/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "3.3.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
         }
       },
       "SegmentedControl.FormsPlugin/2.0.1": {
@@ -711,6 +779,7 @@
         "dependencies": {
           "FreshMvvm": "2.2.4",
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
+          "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -725,6 +794,12 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Fody/3.3.2": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "FreshMvvm/2.2.4": {
         "type": "package",
         "compile": {
@@ -748,6 +823,22 @@
         "runtime": {
           "lib/Xamarin.iOS10/Plugin.Segmented.Control.iOS.dll": {},
           "lib/Xamarin.iOS10/Plugin.Segmented.dll": {}
+        }
+      },
+      "PropertyChanged.Fody/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "3.3.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
         }
       },
       "SegmentedControl.FormsPlugin/2.0.1": {
@@ -952,6 +1043,7 @@
         "dependencies": {
           "FreshMvvm": "2.2.4",
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
+          "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
@@ -967,6 +1059,41 @@
     }
   },
   "libraries": {
+    "Fody/3.3.2": {
+      "sha512": "UIvZdIiqg1SLZ01PHeZBwyVkBPJRHjJ5qb3VPyogqhHd1UxEV0w2AoVC4y5p6jzBAlSMauDZ0Dcu1NM3Mw9k+g==",
+      "type": "package",
+      "path": "fody/3.3.2",
+      "files": [
+        ".signature.p7s",
+        "build/Fody.targets",
+        "fody.3.3.2.nupkg.sha512",
+        "fody.nuspec",
+        "netclassictask/Fody.dll",
+        "netclassictask/FodyCommon.dll",
+        "netclassictask/FodyHelpers.dll",
+        "netclassictask/FodyIsolated.dll",
+        "netclassictask/Mono.Cecil.Mdb.dll",
+        "netclassictask/Mono.Cecil.Mdb.pdb",
+        "netclassictask/Mono.Cecil.Pdb.dll",
+        "netclassictask/Mono.Cecil.Pdb.pdb",
+        "netclassictask/Mono.Cecil.Rocks.dll",
+        "netclassictask/Mono.Cecil.Rocks.pdb",
+        "netclassictask/Mono.Cecil.dll",
+        "netclassictask/Mono.Cecil.pdb",
+        "netstandardtask/Fody.dll",
+        "netstandardtask/FodyCommon.dll",
+        "netstandardtask/FodyHelpers.dll",
+        "netstandardtask/FodyIsolated.dll",
+        "netstandardtask/Mono.Cecil.Mdb.dll",
+        "netstandardtask/Mono.Cecil.Mdb.pdb",
+        "netstandardtask/Mono.Cecil.Pdb.dll",
+        "netstandardtask/Mono.Cecil.Pdb.pdb",
+        "netstandardtask/Mono.Cecil.Rocks.dll",
+        "netstandardtask/Mono.Cecil.Rocks.pdb",
+        "netstandardtask/Mono.Cecil.dll",
+        "netstandardtask/Mono.Cecil.pdb"
+      ]
+    },
     "FreshMvvm/2.2.4": {
       "sha512": "CgrGEFdU17EsQzXiUgOOUjtLaTTCWMu9U1BsplGhVx7pPlcpMiVAo8kesnBdDR0D9jhZ96znwJxWIrmOdZJZWA==",
       "type": "package",
@@ -1011,6 +1138,25 @@
         "lib/uap10.0/Plugin.Segmented.pdb",
         "plugin.segmentedcontrol.netstandard.3.6.0.nupkg.sha512",
         "plugin.segmentedcontrol.netstandard.nuspec"
+      ]
+    },
+    "PropertyChanged.Fody/2.6.0": {
+      "sha512": "NSFceIyxFfVMctN3OWqZ7lL+ZcXq4uYFJ/XwXRhmMfhXTxs5mmg+UoRCLXPTqaXDJlldXDOSgnWTKTPqX5/0zQ==",
+      "type": "package",
+      "path": "propertychanged.fody/2.6.0",
+      "files": [
+        ".signature.p7s",
+        "build/PropertyChanged.Fody.props",
+        "lib/net452/PropertyChanged.dll",
+        "lib/net452/PropertyChanged.xml",
+        "lib/netstandard1.0/PropertyChanged.dll",
+        "lib/netstandard1.0/PropertyChanged.xml",
+        "netclassicweaver/PropertyChanged.Fody.dll",
+        "netclassicweaver/PropertyChanged.Fody.xcf",
+        "netstandardweaver/PropertyChanged.Fody.dll",
+        "netstandardweaver/PropertyChanged.Fody.xcf",
+        "propertychanged.fody.2.6.0.nupkg.sha512",
+        "propertychanged.fody.nuspec"
       ]
     },
     "SegmentedControl.FormsPlugin/2.0.1": {
