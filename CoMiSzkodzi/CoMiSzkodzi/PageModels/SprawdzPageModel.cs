@@ -13,8 +13,23 @@ namespace CoMiSzkodzi
 	{
 		public SprawdzPageModel ()
 		{
-			
-		}
+            NavBarBackgroundColor = Color.Yellow;
+        }
+
+        private Color _navBarBackgroundColor;
+        public Color NavBarBackgroundColor
+        {
+            get
+            {
+                return _navBarBackgroundColor;
+            }
+            set
+            {
+                _navBarBackgroundColor = value;
+                RaisePropertyChanged("NavBarBackgroundColor");
+            }
+        }
+
         public ICommand NavigateHomeCommand
         {
             get

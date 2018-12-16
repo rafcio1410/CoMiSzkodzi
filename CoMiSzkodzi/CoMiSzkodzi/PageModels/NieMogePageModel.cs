@@ -13,8 +13,23 @@ namespace CoMiSzkodzi
 	{
 		public NieMogePageModel ()
 		{
-			
-		}
+            NavBarBackgroundColor = Color.Red;
+        }
+
+        private Color _navBarBackgroundColor;
+        public Color NavBarBackgroundColor
+        {
+            get
+            {
+                return _navBarBackgroundColor;
+            }
+            set
+            {
+                _navBarBackgroundColor = value;
+                RaisePropertyChanged("NavBarBackgroundColor");
+            }
+        }
+
         public ICommand NavigateHomeCommand
         {
             get
