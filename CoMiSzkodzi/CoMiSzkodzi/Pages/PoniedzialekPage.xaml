@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -11,19 +11,19 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="0">
                     <d:CoMiSzkodziBasePage/>
                 </StackLayout>
-                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1">
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1" BackgroundColor="Transparent">
                     <Label Text="Poniedziałek" TextColor="White" FontSize="Large" Margin="10" HorizontalOptions="Center"/>
-                    <ListView SelectionMode="None" ItemsSource="{Binding FoodList}" IsGroupingEnabled="True" >
+                    <ListView SelectionMode="None" ItemsSource="{Binding FoodList}" IsGroupingEnabled="True" BackgroundColor="Transparent" >
                         <ListView.GroupHeaderTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
-                                        <Label Text="{Binding Heading}" TextColor="White" />
+                                    <StackLayout BackgroundColor="Blue" Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                        <Label VerticalTextAlignment="Center" Text="{Binding Heading}" TextColor="Yellow" BackgroundColor="Transparent" />
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
@@ -39,13 +39,31 @@
                                             </Grid.ColumnDefinitions>
                                             <Label Text="{Binding name}" TextColor="White" BackgroundColor="CornflowerBlue" HorizontalTextAlignment="Center" FontSize="Small" Grid.Column="0" VerticalTextAlignment="Center" Margin="8,8,8,8"/>
                                             <StackLayout Grid.Column ="1" HorizontalOptions="EndAndExpand">
-                                                <control:SegmentedControl  FontSize="10" x:Name="SegmentedControl" BackgroundColor="Goldenrod" SelectedSegment="{Binding blacklisted}" TintColor="White" SelectedTextColor="DarkBlue" DisabledColor="Gray" Margin="0,8,8,8" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
-                                                    <control:SegmentedControl.Children>
-                                                        <control:SegmentedControlOption Text="        Mogę        "/>
-                                                        <control:SegmentedControlOption Text="Sprawdź"/>
-                                                        <control:SegmentedControlOption Text="Nie mogę"/>
-                                                    </control:SegmentedControl.Children>
-                                                </control:SegmentedControl>
+                                                <ContentView>
+                                                    <ContentView.Content>
+                                                        <OnPlatform x:TypeArguments="View">
+                                                            <On Platform="Android">
+                                                                <control:SegmentedControl  FontSize="10" BackgroundColor="Goldenrod" SelectedSegment="{Binding blacklisted}" TintColor="White" SelectedTextColor="DarkBlue" DisabledColor="Gray" Margin="0,8,8,8" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
+                                                                        <control:SegmentedControl.Children>
+                                                                        <control:SegmentedControlOption Text="       Mogę        "/>
+                                                                        <control:SegmentedControlOption Text="Sprawdź"/>
+                                                                        <control:SegmentedControlOption Text="Nie mogę"/>
+                                                                    </control:SegmentedControl.Children>
+                                                                </control:SegmentedControl>
+                                                            </On>
+                                                            <On Platform="iOS">
+                                                              <control:SegmentedControl  FontSize="10" BackgroundColor="Goldenrod" SelectedSegment="{Binding blacklisted}" TintColor="White" SelectedTextColor="DarkBlue" DisabledColor="Gray" Margin="0,8,8,8" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
+                                                                <control:SegmentedControl.Children>
+                                                                    <control:SegmentedControlOption Text="Mogę        "/>
+                                                                    <control:SegmentedControlOption Text="Sprawdź"/>
+                                                                    <control:SegmentedControlOption Text="Nie mogę"/>
+                                                                </control:SegmentedControl.Children>
+                                                              </control:SegmentedControl>
+                                                            </On>
+                                                        </OnPlatform>
+                                                    </ContentView.Content>
+                                                </ContentView>
+
                                             </StackLayout>
                                         </Grid>
                                     </StackLayout>

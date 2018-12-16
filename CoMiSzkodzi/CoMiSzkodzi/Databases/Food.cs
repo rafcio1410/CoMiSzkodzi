@@ -6,6 +6,7 @@ using SQLite;
 
 namespace CoMiSzkodzi.Databases
 {
+    [Table("Food")]
     public class Food
     {
         [PrimaryKey,AutoIncrement]

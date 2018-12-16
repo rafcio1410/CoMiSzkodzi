@@ -14,6 +14,7 @@ namespace CoMiSzkodzi.Databases
             string docs = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string datebasePathway = Path.Combine(docs, "FoodDatabase.db");
             Connection = new SQLiteAsyncConnection(datebasePathway);
+
         }
         
     }
