@@ -70,13 +70,6 @@ namespace CoMiSzkodzi
                 }
             }
         }
-        public void OnSearchTermTextChanged()
-        {
-            var foodList = oldFoodList.ElementAt(1);
-            var filteredList = oldFoodList.ElementAt(1).Where(c => c.name.Contains(SearchTerm));
-            FoodGrouping foodGrouping = new FoodGrouping();
-            FoodList = foodGrouping.CreateGroupsFromData(filteredList.ToList());
-        }
 
         public Task FilterItems()
         {
@@ -109,7 +102,24 @@ namespace CoMiSzkodzi
             tcs.SetResult(true);
             return tcs.Task;
         }
-
+        public Task UpdateDatabase()
+        {
+            TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
+            List<Food> listofFood = new List<Food>();
+            foreach(var item in FoodList)
+            {
+                listofFood.AddRange(item);
+            }
+            var result = DatabaseConnection.Connection.UpdateAllAsync(listofFood);
+            result.Wait();
+            if(result.IsCompleted)
+            {
+                tcs.SetResult(true);
+                return tcs.Task;
+            }
+            tcs.SetResult(false);
+            return tcs.Task;
+        }
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
             base.ViewIsAppearing(sender, e);
@@ -131,8 +141,18 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    await CoreMethods.PopToRoot(false);
-                    tcs.SetResult(true);
+                    var result = await CoreMethods.DisplayAlert("Uwaga", "Czy zapisac zmiany?", "Tak", "Nie");
+                    if(result)
+                    {
+                        await UpdateDatabase();
+                        await CoreMethods.PopToRoot(false);
+                        tcs.SetResult(true);
+                    }
+                    else
+                    {
+                        tcs.SetResult(false);
+                    }
+
                 });
             }
         }
@@ -143,8 +163,17 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    await CoreMethods.PopPageModel();
-                    tcs.SetResult(true);
+                    var result = await CoreMethods.DisplayAlert("Uwaga", "Czy chcialbys zapisac zmiany?", "Tak", "Nie");
+                    if (result)
+                    {
+
+                        await CoreMethods.PopToRoot(false);
+                        tcs.SetResult(true);
+                    }
+                    else
+                    {
+                        tcs.SetResult(false);
+                    }
                 });
             }
         }
