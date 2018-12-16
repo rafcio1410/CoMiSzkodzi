@@ -13,8 +13,38 @@ namespace CoMiSzkodzi
 	{
 		public CzwartekPageModel ()
 		{
-			
-		}
+            Title = "Czwartek";
+            NavBarBackgroundColor = Color.Goldenrod;
+        }
+
+        private string _title;
+        public string Title
+        {
+            get
+            {
+                return _title;
+            }
+            set
+            {
+                _title = value;
+                RaisePropertyChanged("Title");
+            }
+        }
+
+        private Color _navBarBackgroundColor;
+        public Color NavBarBackgroundColor
+        {
+            get
+            {
+                return _navBarBackgroundColor;
+            }
+            set
+            {
+                _navBarBackgroundColor = value;
+                RaisePropertyChanged("NavBarBackgroundColor");
+            }
+        }
+
 
         public ICommand NavigateHomeCommand
         {

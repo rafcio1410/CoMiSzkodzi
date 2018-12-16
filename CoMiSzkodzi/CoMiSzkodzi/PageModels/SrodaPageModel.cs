@@ -14,7 +14,23 @@ namespace CoMiSzkodzi
 		public SrodaPageModel ()
 		{
             Title = "Środa";
+            NavBarBackgroundColor = Color.Goldenrod;
         }
+
+        private Color _navBarBackgroundColor;
+        public Color NavBarBackgroundColor
+        {
+            get
+            {
+                return _navBarBackgroundColor;
+            }
+            set
+            {
+                _navBarBackgroundColor = value;
+                RaisePropertyChanged("NavBarBackgroundColor");
+            }
+        }
+
 
         private string _title;
         public string Title

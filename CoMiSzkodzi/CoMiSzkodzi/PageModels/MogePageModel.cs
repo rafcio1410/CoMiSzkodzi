@@ -43,7 +43,7 @@ namespace CoMiSzkodzi
 
             public MogePageModel ()
 		{
-            NavBarBackgroundColor = new Color(0, 255, 0);
+            NavBarBackgroundColor = Color.Green;
         }
         private Color _navBarBackgroundColor;
         public Color NavBarBackgroundColor
