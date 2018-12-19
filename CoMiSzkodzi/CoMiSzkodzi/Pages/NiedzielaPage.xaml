@@ -17,7 +17,7 @@
                     <d:CoMiSzkodziBasePage/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1">
-                    <Label Text="Niedziela" FontSize="Large" />
+
                 </StackLayout>
             </Grid>
 

@@ -6,7 +6,7 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding NavBarBackgroundColor}" >
                 <Button Command="{Binding NavigateBackCommand}" HorizontalOptions="StartAndExpand" Image="backarrow.png" BackgroundColor="{Binding NavBarBackgroundColor}" Padding="0"/>
-                <Label Text="{Binding Title}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold" FontSize="Large"/>
+                <Label Text="{Binding Title}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold" FontSize="Medium"/>
                 <Button Command="{Binding NavigateHomeCommand}" HorizontalOptions="EndAndExpand" Image="home.png" BackgroundColor="{Binding NavBarBackgroundColor}" Padding="0"/>
             </StackLayout>
         </StackLayout>

@@ -151,6 +151,7 @@ namespace CoMiSzkodzi
         public PoniedzialekPageModel ()
 		{
             Title = "Poniedziałek";
+            NavBarBackgroundColor = Color.Goldenrod;
         }
 
         public ICommand NavigateHomeCommand
@@ -195,5 +196,20 @@ namespace CoMiSzkodzi
                 });
             }
         }
+
+        private Color _navBarBackgroundColor;
+        public Color NavBarBackgroundColor
+        {
+            get
+            {
+                return _navBarBackgroundColor;
+            }
+            set
+            {
+                _navBarBackgroundColor = value;
+                RaisePropertyChanged("NavBarBackgroundColor");
+            }
+        }
+
     }
 }
