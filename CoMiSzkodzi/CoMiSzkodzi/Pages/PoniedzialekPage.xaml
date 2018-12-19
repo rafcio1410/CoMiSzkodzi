@@ -10,6 +10,9 @@
              BackgroundImage="backgroundimage.png">    
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout.Margin>
+                <OnPlatform Android="0,10,0,0" iOS="0,20,0,0"/>
+            </StackLayout.Margin>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -19,7 +22,11 @@
                     <d:CoMiSzkodziBasePage/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1" BackgroundColor="Transparent">
-                    <SearchBar Placeholder="Wpisz nazwe produktu" SearchCommand="{Binding FilterProducts}" Text="{Binding SearchTerm}" BackgroundColor="Red"/>
+                    <SearchBar Placeholder="Wpisz nazwe produktu" SearchCommand="{Binding FilterProducts}" Text="{Binding SearchTerm}" BackgroundColor="Silver">
+                        <SearchBar.HeightRequest>
+                            <OnPlatform Android="40"/>
+                        </SearchBar.HeightRequest>
+                    </SearchBar>   
                     <ListView SelectionMode="None" ItemsSource="{Binding FoodList}" IsGroupingEnabled="True" BackgroundColor="Transparent" >
                         <ListView.GroupHeaderTemplate>
                             <DataTemplate>
@@ -40,11 +47,11 @@
                                                 <ColumnDefinition Width="2*" />
                                             </Grid.ColumnDefinitions>
                                             <Label Text="{Binding name}" TextColor="White" BackgroundColor="CornflowerBlue" HorizontalTextAlignment="Center" FontSize="Small" Grid.Column="0" VerticalTextAlignment="Center" Margin="8,8,8,8"/>
-                                            <StackLayout Grid.Column ="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
-                                                <buttons:SfSegmentedControl ItemsSource="{Binding blacklisted}" CornerRadius="3" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" SegmentCornerRadius="3"
+                                            <StackLayout Grid.Column ="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,5,0">
+                                                <buttons:SfSegmentedControl FontSize="11" ItemsSource="{Binding blacklisted}" CornerRadius="3" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" SegmentCornerRadius="3"
                                                     SelectionTextColor="White"
                                                     VisibleSegmentsCount="3"
-                                                    Color="#FFDAA520" 
+                                                    Color="#FFDAA520"
                                                     BorderColor="Black"
                                                     HeightRequest="35"
                                                     SelectedIndex="{Binding blacklisted}"

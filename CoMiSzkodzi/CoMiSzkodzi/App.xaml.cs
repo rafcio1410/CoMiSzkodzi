@@ -14,6 +14,7 @@ namespace CoMiSzkodzi
         public App()
         {
             InitializeComponent();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTI2NDRAMzEzNjJlMzQyZTMwTzN3K0JSbVBlVEthZHN6SElRdmNNVEFJREIzU2x0T0ZDamJ2Z05ZQWhxbz0=");
             DatabaseConnection.InitializeDatabase();
             if (!Settings.HasRunBefore)
             {
@@ -28,17 +29,17 @@ namespace CoMiSzkodzi
         {
             DatabaseConnection.Connection.CreateTableAsync<Food>();
             List<Food> food = new List<Food>();
-            food.Add(new Food { name = "Marchewka", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can }); // Odtąd WARZYWA
-            food.Add(new Food { name = "Cebula", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
-            food.Add(new Food { name = "Por", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
-            food.Add(new Food { name = "Szczypiorek", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
-            food.Add(new Food { name = "Koperek", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
-            food.Add(new Food { name = "Buraki", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
-            food.Add(new Food { name = "Ziemniaki", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
-            food.Add(new Food { name = "Groszek", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
-            food.Add(new Food { name = "Fasola", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
-            food.Add(new Food { name = "Bób", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.Can });
-            food.Add(new Food { name = "Banan", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can }); //Odtąd OWOCE
+            food.Add(new Food { name = "Marchewka", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.ToCheck }); // Odtąd WARZYWA
+            food.Add(new Food { name = "Cebula", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.ToCheck });
+            food.Add(new Food { name = "Por", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.ToCheck });
+            food.Add(new Food { name = "Szczypiorek", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.ToCheck });
+            food.Add(new Food { name = "Koperek", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.ToCheck });
+            food.Add(new Food { name = "Buraki", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.ToCheck });
+            food.Add(new Food { name = "Ziemniaki", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.ToCheck });
+            food.Add(new Food { name = "Groszek", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.ToCheck });
+            food.Add(new Food { name = "Fasola", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.ToCheck });
+            food.Add(new Food { name = "Bób", categories = Enums.Categories.Vegetables, blacklisted = Enums.BlackListed.ToCheck });
+            food.Add(new Food { name = "Banan", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.ToCheck }); //Odtąd OWOCE
             food.Add(new Food { name = "Jabłko surowe", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
             food.Add(new Food { name = "Jabłko gotowane", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });
             food.Add(new Food { name = "Ananas", categories = Enums.Categories.Fruits, blacklisted = Enums.BlackListed.Can });

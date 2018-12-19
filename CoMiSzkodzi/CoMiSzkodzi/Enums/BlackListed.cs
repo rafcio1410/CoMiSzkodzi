@@ -8,6 +8,7 @@ namespace CoMiSzkodzi.Enums
     {
         Can,
         Check,
-        CanNot
+        CanNot,
+        ToCheck
     }
 }

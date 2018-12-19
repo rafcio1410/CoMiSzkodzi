@@ -291,7 +291,7 @@
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
           "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
-          "Syncfusion.Xamarin.Buttons": "16.3.0.36",
+          "Syncfusion.Xamarin.Buttons": "16.4.0.42",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
           "sqlite-net-pcl": "1.5.231"
@@ -594,7 +594,7 @@
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
           "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
-          "Syncfusion.Xamarin.Buttons": "16.3.0.36",
+          "Syncfusion.Xamarin.Buttons": "16.4.0.42",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
           "sqlite-net-pcl": "1.5.231"
@@ -897,7 +897,7 @@
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
           "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
-          "Syncfusion.Xamarin.Buttons": "16.3.0.36",
+          "Syncfusion.Xamarin.Buttons": "16.4.0.42",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
           "sqlite-net-pcl": "1.5.231"
@@ -1200,7 +1200,7 @@
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
           "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
-          "Syncfusion.Xamarin.Buttons": "16.3.0.36",
+          "Syncfusion.Xamarin.Buttons": "16.4.0.42",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
           "sqlite-net-pcl": "1.5.231"
@@ -1773,12 +1773,6 @@
         }
       }
     },
-    "dependencies": {
-      "Syncfusion.Xamarin.Buttons": {
-        "target": "Package",
-        "version": "[16.3.0.36, )"
-      }
-    },
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
@@ -1801,6 +1795,10 @@
           "Xam.Plugins.Settings": {
             "target": "Package",
             "version": "3.1.1"
+          },
+          "Syncfusion.Xamarin.Buttons": {
+            "target": "Package",
+            "version": "16.3.0.36"
           }
         }
       }
@@ -1816,5 +1814,20 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Syncfusion.Xamarin.Buttons from 16.4.0.42 to 16.3.0.36. Reference the package directly from the project to select a different version. \n CoMiSzkodzi.iOS (>= 1.0.0) -> CoMiSzkodzi (>= 1.0.0) -> Syncfusion.Xamarin.Buttons (>= 16.4.0.42) \n CoMiSzkodzi.iOS (>= 1.0.0) -> Syncfusion.Xamarin.Buttons (>= 16.3.0.36)",
+      "libraryId": "Syncfusion.Xamarin.Buttons",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

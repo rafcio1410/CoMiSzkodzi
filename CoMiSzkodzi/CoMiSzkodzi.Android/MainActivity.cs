@@ -17,9 +17,9 @@ namespace CoMiSzkodzi.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTI2NDRAMzEzNjJlMzQyZTMwTzN3K0JSbVBlVEthZHN6SElRdmNNVEFJREIzU2x0T0ZDamJ2Z05ZQWhxbz0=");
             SegmentedControlRenderer.Init();
             LoadApplication(new App());
         }

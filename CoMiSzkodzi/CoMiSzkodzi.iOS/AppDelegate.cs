@@ -24,6 +24,7 @@ namespace CoMiSzkodzi.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTI2NDZAMzEzNjJlMzMyZTMwb1pKcEVYNGZhVWw2d2JDVTNNNHVtMzMyMnJRRUZyM2l6OE9PbThrY2E5cz0=");
             SegmentedControlRenderer.Initialize();
             Syncfusion.XForms.iOS.Buttons.SfSegmentedControlRenderer.Init();
             LoadApplication(new App());
