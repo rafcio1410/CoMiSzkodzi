@@ -25,6 +25,7 @@ namespace CoMiSzkodzi.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             SegmentedControlRenderer.Initialize();
+            Syncfusion.XForms.iOS.Buttons.SfSegmentedControlRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

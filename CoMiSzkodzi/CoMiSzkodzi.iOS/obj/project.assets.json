@@ -111,6 +111,44 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
+      "Syncfusion.Licensing/16.3.0.36": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons/16.3.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "16.3.0.36",
+          "Xamarin.Forms": "2.5.1.527436"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.3.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.3.0.36"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        }
+      },
       "Xam.Plugins.Settings/3.1.1": {
         "type": "package",
         "compile": {
@@ -253,6 +291,7 @@
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
           "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
+          "Syncfusion.Xamarin.Buttons": "16.3.0.36",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
           "sqlite-net-pcl": "1.5.231"
@@ -375,6 +414,44 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
+      "Syncfusion.Licensing/16.3.0.36": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons/16.3.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "16.3.0.36",
+          "Xamarin.Forms": "2.5.1.527436"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.3.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.3.0.36"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        }
+      },
       "Xam.Plugins.Settings/3.1.1": {
         "type": "package",
         "compile": {
@@ -517,6 +594,7 @@
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
           "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
+          "Syncfusion.Xamarin.Buttons": "16.3.0.36",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
           "sqlite-net-pcl": "1.5.231"
@@ -639,6 +717,44 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
+      "Syncfusion.Licensing/16.3.0.36": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons/16.3.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "16.3.0.36",
+          "Xamarin.Forms": "2.5.1.527436"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.3.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.3.0.36"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        }
+      },
       "Xam.Plugins.Settings/3.1.1": {
         "type": "package",
         "compile": {
@@ -781,6 +897,7 @@
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
           "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
+          "Syncfusion.Xamarin.Buttons": "16.3.0.36",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
           "sqlite-net-pcl": "1.5.231"
@@ -903,6 +1020,44 @@
           "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
         }
       },
+      "Syncfusion.Licensing/16.3.0.36": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons/16.3.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "16.3.0.36",
+          "Xamarin.Forms": "2.5.1.527436"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.3.0.36": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.3.0.36"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        }
+      },
       "Xam.Plugins.Settings/3.1.1": {
         "type": "package",
         "compile": {
@@ -1045,6 +1200,7 @@
           "Plugin.SegmentedControl.Netstandard": "3.6.0",
           "PropertyChanged.Fody": "2.6.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
+          "Syncfusion.Xamarin.Buttons": "16.3.0.36",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Forms": "3.4.0.1008975",
           "sqlite-net-pcl": "1.5.231"
@@ -1274,6 +1430,90 @@
         "sqlitepclraw.provider.sqlite3.ios_unified.nuspec"
       ]
     },
+    "Syncfusion.Licensing/16.3.0.36": {
+      "sha512": "0fOgFIP7I19QutnlFjwZjAP5l2SFXE7gHuwg9j2TORPG2o8hNxQsqAFo5+Cz4xFkuk2uindftVh8JDNWzRx5vA==",
+      "type": "package",
+      "path": "syncfusion.licensing/16.3.0.36",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.2/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.16.3.0.36.nupkg.sha512",
+        "syncfusion.licensing.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.Buttons/16.3.0.36": {
+      "sha512": "tDiDZG+zqP8At5vd2e1t7FYsfeZ1kuGDDkWHjmcapmdRH1qaNapseJFwexhu2lz7pq0fBzTy2weIC26owdblwA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.buttons/16.3.0.36",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Buttons.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.Buttons.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.Buttons.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.xml",
+        "lib/netstandard1.0/Syncfusion.Buttons.XForms.dll",
+        "lib/netstandard1.0/Syncfusion.Buttons.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Buttons.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Buttons.XForms.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Properties/Syncfusion.Buttons.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Syncfusion.Buttons.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xbf",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.dll",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.xml",
+        "syncfusion.xamarin.buttons.16.3.0.36.nupkg.sha512",
+        "syncfusion.xamarin.buttons.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.Core/16.3.0.36": {
+      "sha512": "cbhuoZZR0SxpsiKBWS1sNFPGGC63z3b5QDFmdFcrpCjYc/6c8H/RIC+0HJb3pJ2kMLOp7wIX8UjyRmI4uHScCQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.core/16.3.0.36",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.macOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.xml",
+        "lib/netstandard1.0/Syncfusion.Core.XForms.dll",
+        "lib/netstandard1.0/Syncfusion.Core.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/Syncfusion.Core.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleCollapsedIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleCollapsedIcon.xbf",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleVisibleIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/ToggleIcons/ToggleVisibleIcon.xbf",
+        "lib/uap10.0/Syncfusion.Core.XForms.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.xml",
+        "syncfusion.xamarin.core.16.3.0.36.nupkg.sha512",
+        "syncfusion.xamarin.core.nuspec"
+      ]
+    },
     "Xam.Plugins.Settings/3.1.1": {
       "sha512": "EQEYQJ64ZLqui5GWkLMavgqitHxwUHZHryTzUD1021UBuz1XwDSjPL45W0K4pPXjz9oKbg7YpRXKPR1luPr/5Q==",
       "type": "package",
@@ -1496,6 +1736,7 @@
       "CoMiSzkodzi >= 1.0.0",
       "FreshMvvm >= 2.2.4",
       "Plugin.SegmentedControl.Netstandard >= 3.6.0",
+      "Syncfusion.Xamarin.Buttons >= 16.3.0.36",
       "Xam.Plugins.Settings >= 3.1.1",
       "Xamarin.Forms >= 3.4.0.1008975",
       "sqlite-net-pcl >= 1.5.231"
@@ -1530,6 +1771,12 @@
             }
           }
         }
+      }
+    },
+    "dependencies": {
+      "Syncfusion.Xamarin.Buttons": {
+        "target": "Package",
+        "version": "[16.3.0.36, )"
       }
     },
     "frameworks": {

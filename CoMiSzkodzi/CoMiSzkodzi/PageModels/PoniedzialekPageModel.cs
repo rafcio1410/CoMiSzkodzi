@@ -9,6 +9,7 @@ using System.Windows.Input;
 using CoMiSzkodzi.Helpers;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using SegmentedControl;
 
 namespace CoMiSzkodzi
 {
@@ -53,6 +54,17 @@ namespace CoMiSzkodzi
                 });
             }
         }
+        public ICommand SegmentValueChanged
+        {
+            get
+            {
+                return new FreshAwaitCommand(async (contact, tcs) =>
+                {
+                    await StoreChanged();
+                    tcs.SetResult(true);
+                });
+            }
+        }
         private string _searchTerm;
         public string SearchTerm
         {
@@ -62,7 +74,7 @@ namespace CoMiSzkodzi
             }
             set
             {
-                if(_searchTerm != value)
+                if (_searchTerm != value)
                 {
                     _searchTerm = value;
                     RaisePropertyChanged("SearchTerm");
@@ -70,7 +82,13 @@ namespace CoMiSzkodzi
                 }
             }
         }
-
+        public Task StoreChanged()
+        {
+            TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
+            var updatedListed = FoodList;
+            tcs.SetResult(true);
+            return tcs.Task;
+        }
         public Task FilterItems()
         {
             var cleanSearchTerm = SearchTerm.ToLower().Trim();

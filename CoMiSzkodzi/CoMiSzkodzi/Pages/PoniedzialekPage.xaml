@@ -5,6 +5,8 @@
              x:Class="CoMiSzkodzi.PoniedzialekPage"
              xmlns:d="clr-namespace:CoMiSzkodzi;assembly=CoMiSzkodzi"
              xmlns:control="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:segmentCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
              BackgroundImage="backgroundimage.png">    
     <ContentPage.Content>
         <StackLayout>
@@ -35,35 +37,27 @@
                                         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="2*" />
                                             </Grid.ColumnDefinitions>
                                             <Label Text="{Binding name}" TextColor="White" BackgroundColor="CornflowerBlue" HorizontalTextAlignment="Center" FontSize="Small" Grid.Column="0" VerticalTextAlignment="Center" Margin="8,8,8,8"/>
-                                            <StackLayout Grid.Column ="1" HorizontalOptions="EndAndExpand">
-                                                <ContentView>
-                                                    <ContentView.Content>
-                                                        <OnPlatform x:TypeArguments="View">
-                                                            <On Platform="Android">
-                                                                <control:SegmentedControl  FontSize="10" BackgroundColor="Goldenrod" SelectedSegment="{Binding blacklisted}" TintColor="White" SelectedTextColor="DarkBlue" DisabledColor="Gray" Margin="0,8,8,8" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
-                                                                        <control:SegmentedControl.Children>
-                                                                        <control:SegmentedControlOption Text="       Mogę        "/>
-                                                                        <control:SegmentedControlOption Text="Sprawdź"/>
-                                                                        <control:SegmentedControlOption Text="Nie mogę"/>
-                                                                    </control:SegmentedControl.Children>
-                                                                </control:SegmentedControl>
-                                                            </On>
-                                                            <On Platform="iOS">
-                                                              <control:SegmentedControl  FontSize="10" BackgroundColor="Goldenrod" SelectedSegment="{Binding blacklisted}" TintColor="White" SelectedTextColor="DarkBlue" DisabledColor="Gray" Margin="0,8,8,8" VerticalOptions="FillAndExpand" HorizontalOptions="EndAndExpand">
-                                                                <control:SegmentedControl.Children>
-                                                                    <control:SegmentedControlOption Text="Mogę        "/>
-                                                                    <control:SegmentedControlOption Text="Sprawdź"/>
-                                                                    <control:SegmentedControlOption Text="Nie mogę"/>
-                                                                </control:SegmentedControl.Children>
-                                                              </control:SegmentedControl>
-                                                            </On>
-                                                        </OnPlatform>
-                                                    </ContentView.Content>
-                                                </ContentView>
-
+                                            <StackLayout Grid.Column ="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                                                <buttons:SfSegmentedControl ItemsSource="{Binding blacklisted}" CornerRadius="3" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" SegmentCornerRadius="3"
+                                                    SelectionTextColor="White"
+                                                    VisibleSegmentsCount="3"
+                                                    Color="#FFDAA520" 
+                                                    BorderColor="Black"
+                                                    HeightRequest="35"
+                                                    SelectedIndex="{Binding blacklisted}"
+                                                    SegmentBorderThickness="2"
+                                                    SegmentHeight="35"
+                                                    FontColor="Black"
+                                                    BackgroundColor="White">
+                                                    <segmentCollection:List x:TypeArguments="x:String">
+                                                        <x:String>Moge</x:String>
+                                                        <x:String>Nie Moge</x:String>
+                                                        <x:String>Sprawdz</x:String>
+                                                    </segmentCollection:List>
+                                                </buttons:SfSegmentedControl>
                                             </StackLayout>
                                         </Grid>
                                     </StackLayout>

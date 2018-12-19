@@ -17,5 +17,10 @@ namespace CoMiSzkodzi
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
         }
-	}
+
+        void SegmentValueChanged(object sender, Plugin.Segmented.Event.SegmentSelectEventArgs e)
+        {
+            var test = "test";
+        }
+    }
 }
