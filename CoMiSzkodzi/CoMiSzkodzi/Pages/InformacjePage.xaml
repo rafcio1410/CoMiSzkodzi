@@ -1,26 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-             xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CoMiSzkodzi.InformacjePage"
-             xmlns:d="clr-namespace:CoMiSzkodzi;assembly=CoMiSzkodzi"
-             BackgroundImage="backgroundimage.png" >
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CoMiSzkodzi.InformacjePage" xmlns:d="clr-namespace:CoMiSzkodzi;assembly=CoMiSzkodzi" BackgroundImage="backgroundimage.png">
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout.Margin>
+               <OnPlatform iOS="0,20,0,0" />
+            </StackLayout.Margin>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="0">
-                    <d:CoMiSzkodziBasePage/>
+                    <d:CoMiSzkodziBasePage />
                 </StackLayout>
                 <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1">
                     <Label x:Name="Informations" Margin="20" FontSize="Medium" HorizontalOptions="Center" Text="" BackgroundColor="White" />
-                    <Button x:Name="SendEmail" HorizontalOptions="Center" BackgroundColor="DarkBlue" Text="Wyślij Email" TextColor="White" Margin="5" CornerRadius="20"/>
+                    <Button x:Name="SendEmail" HorizontalOptions="Center" BackgroundColor="DarkBlue" Text="Wyślij Email" TextColor="White" Margin="5" CornerRadius="20" />
                 </StackLayout>
             </Grid>
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
