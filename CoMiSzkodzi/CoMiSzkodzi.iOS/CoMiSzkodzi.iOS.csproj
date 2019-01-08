@@ -164,6 +164,9 @@
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
       <Version>16.3.0.36</Version>
     </PackageReference>
+    <PackageReference Include="XLabs.Forms">
+      <Version>2.0.5782</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -176,5 +179,6 @@
     <BundleResource Include="Resources\backarrow.png" />
     <BundleResource Include="Resources\backgroundimage.png" />
     <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\iconadd.png" />
   </ItemGroup>
 </Project>

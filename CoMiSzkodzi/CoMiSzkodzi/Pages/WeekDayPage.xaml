@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-             xmlns="http://xamarin.com/schemas/2014/forms"
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CoMiSzkodzi.PoniedzialekPage"
+             x:Class="CoMiSzkodzi.Pages.WeekDayPage"
              xmlns:d="clr-namespace:CoMiSzkodzi;assembly=CoMiSzkodzi"
              xmlns:control="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:segmentCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
-             BackgroundImage="backgroundimage.png">    
+             BackgroundImage="backgroundimage.png">
     <ContentPage.Content>
-        <StackLayout>
+         <StackLayout>
             <StackLayout.Margin>
                 <OnPlatform iOS="0,20,0,0"/>
             </StackLayout.Margin>
@@ -58,7 +57,7 @@
                                             </Grid.ColumnDefinitions>
                                                     <Label Text="{Binding name}" TextColor="White" BackgroundColor="CornflowerBlue" HorizontalTextAlignment="Center" FontSize="Small"  VerticalTextAlignment="Center" Margin="8,8,8,8" Grid.Column="0" />
                                             <StackLayout Grid.Column ="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,5,0">
-                                                <buttons:SfSegmentedControl FontSize="11" ItemsSource="{Binding blacklisted}" CornerRadius="3" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" SegmentCornerRadius="3"
+                                                <buttons:SfSegmentedControl FontSize="11" CornerRadius="3"  SelectionChanged="Handle_SelectionChanged" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" SegmentCornerRadius="3"
                                                     SelectionTextColor="White"
                                                     VisibleSegmentsCount="3"
                                                     Color="#FFDAA520"
