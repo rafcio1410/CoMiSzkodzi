@@ -1,24 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CoMiSzkodzi.MogeNieMogePage" xmlns:d="clr-namespace:CoMiSzkodzi;assembly=CoMiSzkodzi" BackgroundImage="backgroundimage.png">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoMiSzkodzi.MogeNieMogePage"
+             xmlns:d="clr-namespace:CoMiSzkodzi;assembly=CoMiSzkodzi"
+             BackgroundImage="backgroundimage.png"
+             >
+
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout.Margin>
-               <OnPlatform iOS="0,20,0,0" />
-            </StackLayout.Margin>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <StackLayout Grid.Row="0">
-                    <d:CoMiSzkodziBasePage />
+                    <d:CoMiSzkodziBasePage/>
                 </StackLayout>
                 <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1">
-                    <Button Command="{Binding CanCommand}" x:Name="Can" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Mogę" FontSize="Large" TextColor="White" Margin="10" CornerRadius="20" />
-                    <Button Command="{Binding CanNotCommand}" x:Name="CanNot" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" FontSize="Large" Text="Nie mogę" TextColor="White" Margin="10" CornerRadius="20" />
-                    <Button Command="{Binding CheckCommand}" x:Name="Check" HorizontalOptions="Fill" BackgroundColor="CornflowerBlue" FontSize="Large" Text="Sprawdź" TextColor="White" Margin="10" CornerRadius="20" />
+                    <Button Command="{Binding CanCommand}" x:Name="Can" HorizontalOptions="Fill" BackgroundColor="DarkBlue" Text="Mogę" FontSize="Large" TextColor="White" Margin="10" CornerRadius="20"/>
+                    <Button Command="{Binding CanNotCommand}" x:Name="CanNot" HorizontalOptions="Fill" BackgroundColor="DodgerBlue" FontSize="Large" Text="Nie mogę" TextColor="White" Margin="10" CornerRadius="20"/>
+                    <Button Command="{Binding CheckCommand}" x:Name="Check" HorizontalOptions="Fill" BackgroundColor="CornflowerBlue" FontSize="Large" Text="Sprawdź" TextColor="White" Margin="10" CornerRadius="20"/>
                 </StackLayout>
             </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

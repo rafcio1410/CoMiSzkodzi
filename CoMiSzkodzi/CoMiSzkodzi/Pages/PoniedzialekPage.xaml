@@ -11,7 +11,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout.Margin>
-                <OnPlatform iOS="0,20,0,0"/>
+                <OnPlatform Android="0,10,0,0" iOS="0,20,0,0"/>
             </StackLayout.Margin>
             <Grid>
                 <Grid.RowDefinitions>
@@ -24,17 +24,10 @@
                 <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1" BackgroundColor="Transparent">
                     <SearchBar Placeholder="Wpisz nazwe produktu" SearchCommand="{Binding FilterProducts}" Text="{Binding SearchTerm}" BackgroundColor="Silver">
                         <SearchBar.HeightRequest>
-                            <OnPlatform Android="40" iOS="40"/>
+                            <OnPlatform Android="40"/>
                         </SearchBar.HeightRequest>
-                    </SearchBar>
-                    <StackLayout Orientation="Horizontal" BackgroundColor="Silver" HorizontalOptions="FillAndExpand">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding AddNewFoodCommand}"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="iconadd" BackgroundColor="Silver" HorizontalOptions="StartAndExpand" />
-                        <Label VerticalTextAlignment="Center" TextColor="White" Text="Dodaj nowy produkt" HorizontalOptions="CenterAndExpand"/>
-                    </StackLayout>   
-                    <ListView x:Name="ProductsListView" SelectionMode="None" ItemsSource="{Binding FoodList}" IsGroupingEnabled="True" BackgroundColor="Transparent" >
+                    </SearchBar>   
+                    <ListView SelectionMode="None" ItemsSource="{Binding FoodList}" IsGroupingEnabled="True" BackgroundColor="Transparent" >
                         <ListView.GroupHeaderTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -47,16 +40,13 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                   <ViewCell.ContextActions>
-                                        <MenuItem Clicked="OnDelete" Command="{Binding RemoveProductCommand}" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
-                                   </ViewCell.ContextActions>
                                     <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Fill" >
                                         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="2*" />
                                             </Grid.ColumnDefinitions>
-                                                    <Label Text="{Binding name}" TextColor="White" BackgroundColor="CornflowerBlue" HorizontalTextAlignment="Center" FontSize="Small"  VerticalTextAlignment="Center" Margin="8,8,8,8" Grid.Column="0" />
+                                            <Label Text="{Binding name}" TextColor="White" BackgroundColor="CornflowerBlue" HorizontalTextAlignment="Center" FontSize="Small" Grid.Column="0" VerticalTextAlignment="Center" Margin="8,8,8,8"/>
                                             <StackLayout Grid.Column ="1" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,5,0">
                                                 <buttons:SfSegmentedControl FontSize="11" ItemsSource="{Binding blacklisted}" CornerRadius="3" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" SegmentCornerRadius="3"
                                                     SelectionTextColor="White"
@@ -73,7 +63,6 @@
                                                         <x:String>Moge</x:String>
                                                         <x:String>Nie Moge</x:String>
                                                         <x:String>Sprawdz</x:String>
-                                                        <x:String>Nie Wiem</x:String>
                                                     </segmentCollection:List>
                                                 </buttons:SfSegmentedControl>
                                             </StackLayout>

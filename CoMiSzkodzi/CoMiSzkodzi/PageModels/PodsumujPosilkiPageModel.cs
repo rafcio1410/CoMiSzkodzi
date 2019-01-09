@@ -3,10 +3,9 @@ using FreshMvvm;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 using Xamarin.Forms;
 using System.Windows.Input;
-using CoMiSzkodzi.Helpers;
-using CoMiSzkodzi.PageModels;
 
 namespace CoMiSzkodzi
 {
@@ -18,9 +17,7 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    WeekDayParameter weekDay = new WeekDayParameter();
-                    weekDay.DayOfTheWeek = Enums.WeekDays.Monday;
-                    await CoreMethods.PushPageModel<WeekDayPageModel>(weekDay);
+                    await CoreMethods.PushPageModel<PoniedzialekPageModel>();
                     tcs.SetResult(true);
                 });
             }
@@ -32,9 +29,7 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    WeekDayParameter weekDay = new WeekDayParameter();
-                    weekDay.DayOfTheWeek = Enums.WeekDays.Tuesday;
-                    await CoreMethods.PushPageModel<WeekDayPageModel>(weekDay);
+                    await CoreMethods.PushPageModel<WtorekPageModel>();
                     tcs.SetResult(true);
                 });
             }
@@ -46,9 +41,7 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    WeekDayParameter weekDay = new WeekDayParameter();
-                    weekDay.DayOfTheWeek = Enums.WeekDays.Wendnsday;
-                    await CoreMethods.PushPageModel<WeekDayPageModel>(weekDay);
+                    await CoreMethods.PushPageModel<SrodaPageModel>();
                     tcs.SetResult(true);
                 });
             }
@@ -60,9 +53,7 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    WeekDayParameter weekDay = new WeekDayParameter();
-                    weekDay.DayOfTheWeek = Enums.WeekDays.Thursday;
-                    await CoreMethods.PushPageModel<WeekDayPageModel>(weekDay);
+                    await CoreMethods.PushPageModel<CzwartekPageModel>();
                     tcs.SetResult(true);
                 });
             }
@@ -74,9 +65,7 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    WeekDayParameter weekDay = new WeekDayParameter();
-                    weekDay.DayOfTheWeek = Enums.WeekDays.Friday;
-                    await CoreMethods.PushPageModel<WeekDayPageModel>(weekDay);
+                    await CoreMethods.PushPageModel<PiatekPageModel>();
                     tcs.SetResult(true);
                 });
             }
@@ -88,9 +77,7 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    WeekDayParameter weekDay = new WeekDayParameter();
-                    weekDay.DayOfTheWeek = Enums.WeekDays.Saturday;
-                    await CoreMethods.PushPageModel<WeekDayPageModel>(weekDay);
+                    await CoreMethods.PushPageModel<SobotaPageModel>();
                     tcs.SetResult(true);
                 });
             }
@@ -102,9 +89,7 @@ namespace CoMiSzkodzi
             {
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
-                    WeekDayParameter weekDay = new WeekDayParameter();
-                    weekDay.DayOfTheWeek = Enums.WeekDays.Sunday;
-                    await CoreMethods.PushPageModel<WeekDayPageModel>(weekDay);
+                    await CoreMethods.PushPageModel<NiedzielaPageModel>();
                     tcs.SetResult(true);
                 });
             }

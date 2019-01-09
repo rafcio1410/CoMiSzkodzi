@@ -10,8 +10,6 @@ using CoMiSzkodzi.Helpers;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using SegmentedControl;
-using CoMiSzkodzi.PageModels;
-using XLabs.Forms.Behaviors;
 
 namespace CoMiSzkodzi
 {
@@ -56,17 +54,6 @@ namespace CoMiSzkodzi
                 });
             }
         }
-        public ICommand AddNewFoodCommand
-        {
-            get
-            {
-                return new FreshAwaitCommand(async (contact, tcs) => 
-                {
-                    await CoreMethods.PushPageModel<AddNewFoodPageModel>();
-                    tcs.SetResult(true);
-                });
-            }
-        }
         public ICommand SegmentValueChanged
         {
             get
@@ -74,17 +61,6 @@ namespace CoMiSzkodzi
                 return new FreshAwaitCommand(async (contact, tcs) =>
                 {
                     await StoreChanged();
-                    tcs.SetResult(true);
-                });
-            }
-        }
-        public ICommand RemoveProductCommand
-        {
-            get
-            {
-                return new FreshAwaitCommand(async (product, tcs) =>
-                {
-                    await RemovePreductFromDatabase(product);
                     tcs.SetResult(true);
                 });
             }
@@ -105,12 +81,6 @@ namespace CoMiSzkodzi
                     FilterItems();
                 }
             }
-        }
-        public Task RemovePreductFromDatabase(object Item)
-        {
-            TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
-            tcs.SetResult(true);
-            return tcs.Task;
         }
         public Task StoreChanged()
         {
@@ -171,11 +141,6 @@ namespace CoMiSzkodzi
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
             base.ViewIsAppearing(sender, e);
-            RefreshList();
-
-        }
-        public void RefreshList()
-        {
             var foodList = DatabaseConnection.Connection.QueryAsync<Food>("SELECT * FROM Food");
             var listToSort = foodList.Result;
             FoodGrouping foodGrouping = new FoodGrouping();
@@ -204,8 +169,7 @@ namespace CoMiSzkodzi
                     }
                     else
                     {
-                        await CoreMethods.PopToRoot(false);
-                        tcs.SetResult(true);
+                        tcs.SetResult(false);
                     }
 
                 });
@@ -221,14 +185,13 @@ namespace CoMiSzkodzi
                     var result = await CoreMethods.DisplayAlert("Uwaga", "Czy chcialbys zapisac zmiany?", "Tak", "Nie");
                     if (result)
                     {
-                        await UpdateDatabase();
-                        await CoreMethods.PopPageModel();
+
+                        await CoreMethods.PopToRoot(false);
                         tcs.SetResult(true);
                     }
                     else
                     {
-                        await CoreMethods.PopPageModel();
-                        tcs.SetResult(true);
+                        tcs.SetResult(false);
                     }
                 });
             }
